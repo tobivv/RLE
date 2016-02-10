@@ -8,9 +8,6 @@
 using namespace std;
 using namespace cimg_library;
 
-Imagecon::Imagecon(){
-}
-
 struct pixel{
     int r;  //red
     int g;  //green
@@ -52,7 +49,7 @@ int zHex(char* liczbaHex){      //konwersja na system dzisietny
     return liczba;
 }
 
-void Imagecon::entropia(){
+void Imagecon::entropia(string nazwa){
     double entropia=0;
     CImg<unsigned char> image(nazwa.c_str());
     int picsize=image.width()*image.height();
@@ -103,7 +100,7 @@ void Imagecon::entropia(){
     delete tab2;
 }
 
-void Imagecon::RLE(){
+void Imagecon::RLE(string nazwa){
     string nazwa2;
     char *liczbaHex=new char[2];
     cout<<"Podaj nazwe pliku wyjsciowego\n";
@@ -153,7 +150,7 @@ void Imagecon::RLE(){
 
 
 
-void Imagecon::reverseRLE(){
+void Imagecon::reverseRLE(string nazwa){
     fstream plik;
     string linia;
     char *liczbaHex=new char[2];

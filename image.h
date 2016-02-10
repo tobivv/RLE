@@ -2,17 +2,13 @@
 #define IMAGE_H_INCLUDED
 #include <string>
 
-
-class Imagecon
+namespace Imagecon
 {
-   public:
-       Imagecon();
-       std::string nazwa;
-       void entropia();
-       void RLE();
-       void reverseRLE();
+       void entropia(std::string);
+       void RLE(std::string);
+       void reverseRLE(std::string);
 
-};
+}
 
 
 
